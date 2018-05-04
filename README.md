@@ -1,5 +1,28 @@
 # ROS_RealTime_CommonObject_Localization
-##Usage 
+## Usage 
+#activate conda environment
+#assuming conda path not specified in ~/.bashrc
+# open new terminal and run
+```
+export PATH=/home/iros/miniconda2/bin:$PATH
+source activate myenv #loads the necessary environment for running dnn library of openCV
+```
+#run
+```
+python real.py
+```
+#open a new terminal , assuming not conda environment activated
+```
+~/catkin_ws/
+source devel/setup.bash
+roslaunch ros_prj prj.launch
+rosrun ros_prj prj.py
+```
+# if the last doesnt work try
+```
+roscd ros_prj
+python prj.py
+```
 
 ## Project Video 1
 <div align="center">
