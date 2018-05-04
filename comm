@@ -1,0 +1,24 @@
+roslaunch turtlebot_teleop logitech.launch
+rostopic echo joy
+roslaunch turtlebot_bringup minimal.launch
+
+
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/iros/catkin_ws/src/TestMap/rvlab0.yaml
+roslaunch turtlebot_rviz_launchers view_navigation.launch --screen
+
+roslaunch turtlebot_navigation gmapping_demo.launch
+roslaunch turtlebot_rviz_launchers view_navigation.launch
+rosrun map_server map_saver -f /home/iros/catkin_ws/src/TestMap/rvlab0
+
+
+...
+rostopic echo amcl_pose
+rospack find pckname
+
+
+#########
+source devel/setup.bash
+roslaunch ros_prj prj.launch
+ros
+
+

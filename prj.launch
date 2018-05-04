@@ -1,0 +1,35 @@
+<!-- -*- xml -*-
+  -->
+<launch>
+
+	<!-- Bring up the turtlebot -->
+	<include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+
+	<!-- Joy launch file
+	<include file="$(find Demo2)/joy.launch"/> -->
+	
+	
+	<!-- AMCL Map -->
+	<include file="$(find turtlebot_navigation)/launch/amcl_demo.launch">
+	<arg name="map_file" default="$(find ros_prj)/rvlab0.yaml"/>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
+	</include>  
+
+	<!--Launch rviz-->
+	<include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/> 
+ 	
+	<!--Image proc-->
+	
+	<!--Launch part2b.launch for AR code-->
+	<!--Move Base-->
+	
+	<!--Safety Controller-
+	<include file="$(find Demo3)/safety_controller.launch"/>-->
+
+	<!--Sound-
+	<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>-->
+
+  
+  
+</launch>
+
