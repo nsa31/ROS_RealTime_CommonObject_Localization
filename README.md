@@ -2,7 +2,7 @@
 ## Usage 
 #activate conda environment
 #assuming conda path not specified in ~/.bashrc
-# open new terminal and run
+#open new terminal and run
 ```
 export PATH=/home/iros/miniconda2/bin:$PATH
 source activate myenv #loads the necessary environment for running dnn library of openCV
@@ -18,7 +18,7 @@ source devel/setup.bash
 roslaunch ros_prj prj.launch
 rosrun ros_prj prj.py
 ```
-# if the last doesnt work try
+#if the last doesnt work try
 ```
 roscd ros_prj
 python prj.py
